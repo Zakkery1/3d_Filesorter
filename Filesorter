@@ -3,18 +3,18 @@ import os
 from zipfile import ZipFile
 
 #file_Type = '.stl', '.STL'
-new_Folder = 'C:\\Users\\snipe\\OneDrive\\Desktop\\Stl folder\\'
-parent_Dir = 'C:\\Users\\snipe\\Downloads\\'
-dir = os.listdir('C:\\Users\\snipe\\Downloads')
+new_Folder = # Desired folder
+parent_Dir = # Folder where files are downloaded to
+dir = os.listdir(parent_Dir)
 #directory = 'stl file'
-#os.chdir(r"C:\Users\snipe\Downloads")
+
 
 def file_sorter():
     # iterate over all of the files in the Downloads directory
     for files_Main in dir:
         # find all of the .zip files
         if files_Main.endswith('.zip'):
-            file_Path = f"C:\\Users\\snipe\\Downloads\\{files_Main}"
+            file_Path = f"{parent_Dir}{files_Main}"
             # Remove the ".zip" extension from the filename
             file_Name = files_Main[:-4]
             # open the folder for reading as zipobj
