@@ -1,17 +1,20 @@
 import os.path
 import os
+from tkinter import *
+from tkinter import filedialog as fd
 from zipfile import ZipFile
 
+
 #file_Type = '.stl', '.STL'
-new_Folder = # Desired folder
-parent_Dir = # Folder where files are downloaded to
-dir = os.listdir(parent_Dir)
-#directory = 'stl file'
+new_Folder =  fd.askdirectory(title='Select the folder where you want the extracted file to go!') # Desired folder
+parent_Dir =  fd.askdirectory(title='Select the folder where the downloaded file is!') # Folder where files are downloaded to
+# directory = 'stl file'
+print(f"{parent_Dir}")
 
 
 def file_sorter():
     # iterate over all of the files in the Downloads directory
-    for files_Main in dir:
+    for files_Main in parent_Dir:
         # find all of the .zip files
         if files_Main.endswith('.zip'):
             file_Path = f"{parent_Dir}{files_Main}"
